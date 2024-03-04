@@ -60,10 +60,3 @@ jobs:
         username: ${{ secrets.REMOTE_USER }}
         passphrase: ${{ secrets.PASSPHRASE }}
         privateKey: ${{ secrets.REMOTE_SSH_KEY }}
-
-    - name: App Setting Variable
-      uses: microsoft/variable-substitution@v1
-      with:
-        files: '/var/www/shopnet/appsettings.json'
-      env:
-        CustomerDatabase.ConnectionString: ${{ secrets.CONNECTION_STRING }}
