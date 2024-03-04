@@ -29,6 +29,13 @@ jobs:
       
     - name: DotNet Publish
       run: dotnet publish -c Release
+
+    - name: App Setting Variable
+      uses: microsoft/variable-substitution@v1
+      with:
+        files: '/var/www/sample-app/appsettings.json'
+      env:
+        CustomerDatabase.ConnectionString: ${{ secrets.CONNECTION_STRING }}
       
     - name: Stop cicdsample Service
       uses: garygrossgarten/github-action-ssh@v0.6.3
