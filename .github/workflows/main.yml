@@ -33,7 +33,7 @@ jobs:
     - name: App Setting Variable
       uses: microsoft/variable-substitution@v1
       with:
-        files: '/var/www/sample-app/appsettings.json'
+        files: '/var/www/shopnet/appsettings.json'
       env:
         CustomerDatabase.ConnectionString: ${{ secrets.CONNECTION_STRING }}
       
