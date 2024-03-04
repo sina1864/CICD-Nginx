@@ -29,14 +29,7 @@ jobs:
       
     - name: DotNet Publish
       run: dotnet publish -c Release
-
-    - name: App Setting Variable
-      uses: microsoft/variable-substitution@v1
-      with:
-        files: '/var/www/shopnet/appsettings.json'
-      env:
-        CustomerDatabase.ConnectionString: ${{ secrets.CONNECTION_STRING }}
-      
+     
     - name: Stop cicdsample Service
       uses: garygrossgarten/github-action-ssh@v0.6.3
       with:
@@ -58,7 +51,14 @@ jobs:
         privateKey: ${{ secrets.REMOTE_SSH_KEY }}
       env:
         ASPNETCORE_ENVIRONMENT: Production
-        
+    
+    - name: App Setting Variable
+      uses: microsoft/variable-substitution@v1
+      with:
+        files: '/var/www/shopnet/appsettings.json'
+      env:
+        CustomerDatabase.ConnectionString: ${{ secrets.CONNECTION_STRING }}
+
     - name: Start cicdsample Service
       uses: garygrossgarten/github-action-ssh@v0.6.3
       with:
