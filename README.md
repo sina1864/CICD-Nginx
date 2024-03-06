@@ -151,4 +151,5 @@ Install Certbot as a Snap package, create a symbolic link to make it globally ac
   sudo certbot --nginx
 ```
 - add your email address and domain and also accept the rules (Y).
+
 Go to `https://your_domain/swagger/index.html` to view your website.
