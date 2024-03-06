@@ -35,7 +35,7 @@ View the private SHH key:
 ```
 - copy and save the private SSH key (which will be used as GitHub secret in the future)
 
-Enable SSH key authentication for the SSH key type and restart the SSH service:
+Enable SSH key authentication for the SSH key type:
 ```bash
   nano /etc/ssh/sshd_config
 ```
