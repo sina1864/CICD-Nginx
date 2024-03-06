@@ -1,5 +1,5 @@
 
-# CICD-Nginx
+# CI/CD-Nginx
 
 Sample CI/CD Project - Using GitHub Actions with SCP and Nginx on Ubuntu 22.04
 
