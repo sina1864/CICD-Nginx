@@ -40,8 +40,7 @@ Enable SSH key authentication for the SSH key type:
   nano /etc/ssh/sshd_config
 ```
 - add this line of command: `PubkeyAcceptedKeyTypes=+ssh-rsa`
-
-Restart the SSH service:
+- restart the SSH service:
 ```bash
   sudo systemctl restart ssh
 ```
