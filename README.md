@@ -151,4 +151,6 @@ Install Certbot as a Snap package, create a symbolic link to make it globally ac
 ```
 - add your email address and domain and also accept the rules (Y).
 
-Go to `https://your_domain/swagger/index.html` to view your website.
+**Step 6 (Re-run the GitHub action):**
+
+Re-run all jobs of your last GitHub push and then go to `https://your_domain/swagger/index.html` to view your website.
