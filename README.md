@@ -86,14 +86,14 @@ WantedBy=multi-user.target
   sudo systemctl enable cicdsample
 ```
 
-Install Nginx, Certbot with the Nginx plugin, checks Nginx status, enables it to start at boot:
+Install Nginx, Certbot with the Nginx plugin, check Nginx status, enable it to start at boot:
 ```bash
   sudo apt install nginx certbot python3-certbot-nginx -y
   systemctl status nginx
   sudo systemctl enable nginx 
 ```
 
-Creates a directory for the shopnet website, and open a new server block configuration file for it:
+Create a directory for the shopnet website, and open a new server block configuration file for it:
 ```bash
   sudo mkdir /var/www/shopnet
   nano /etc/nginx/sites-enabled/shopnet
