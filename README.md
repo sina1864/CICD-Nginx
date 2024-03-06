@@ -35,11 +35,13 @@ View the private SHH key:
 ```
 - copy and save the private SSH key (which will be used as GitHub secret in the future)
 
-Enables SSH key authentication for the SSH key type and restarts the SSH service:
+Enable SSH key authentication for the SSH key type and restart the SSH service:
 ```bash
   nano /etc/ssh/sshd_config
 ```
 - add this line of command: `PubkeyAcceptedKeyTypes=+ssh-rsa`
+
+Restart the SSH service:
 ```bash
   sudo systemctl restart ssh
 ```
